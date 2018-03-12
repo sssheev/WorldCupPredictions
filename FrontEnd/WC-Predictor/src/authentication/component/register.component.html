@@ -1,28 +1,35 @@
-<div class="register-container" fxLayout="column" fxLayoutAlign="space-around center">
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-    <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center">
-      <input matInput [(ngModel)]="user.firstName" placeholder="First Name">
-    </mat-form-field>
-    <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center">
-      <input matInput [(ngModel)]="user.lastName" placeholder="Last Name">
-    </mat-form-field>
-  </div>
-  <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center">
-    <input matInput [(ngModel)]="user.email" placeholder="E-mail">
-  </mat-form-field>
-  <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center">
-    <input matInput [(ngModel)]="user.userName" placeholder="Username">
-  </mat-form-field>
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-    <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="left center">
-      <input matInput [(ngModel)]="user.password" placeholder="Password">
-    </mat-form-field>
-    <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="left center">
-      <input matInput [(ngModel)]="confirmedPassword" placeholder="Confirm Password">
-    </mat-form-field>
-  </div>
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-    <button (click)="login()" mat-raised-button color="primary">Login</button>
+<mat-card class="register-card" fxLayout="column" fxLayoutAlign="space-between center">
+  <mat-card-header class="mat-header" fxLayout="row" fxLayoutAlign="center center ">
+        <mat-card-title class="mat-title">Register</mat-card-title>
+  </mat-card-header>
+  <mat-card-content fxLayout="column" fxLayoutAlign="space-around center" class="full-width">
+    <div fxLayout="row" class="full-width" fxLayoutAlign="space-between center">
+      <mat-form-field class="small-input">
+        <input matInput [(ngModel)]="user.firstName" placeholder="First Name">
+      </mat-form-field>
+      <mat-form-field class="small-input">
+        <input matInput [(ngModel)]="user.lastName" placeholder="Last Name">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" class="full-width" fxLayoutAlign="space-between center">
+      <mat-form-field class="small-input" >
+        <input matInput [(ngModel)]="user.email" placeholder="E-mail">
+      </mat-form-field>
+      <mat-form-field class="small-input">
+        <input matInput [(ngModel)]="user.userName" placeholder="Username">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" class="full-width" fxLayoutAlign="space-between center">
+      <mat-form-field class="small-input" >
+        <input matInput [(ngModel)]="user.password" placeholder="Password">
+      </mat-form-field>
+      <mat-form-field class="small-input">
+        <input matInput [(ngModel)]="confirmedPassword" placeholder="Confirm Password">
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <div fxLayout="row" fxLayoutAlign="space-around center" style="width:215px">
+    <button (click)="login()" mat-raised-button color="primary">Sign In</button>
     <button (click)="register()" mat-raised-button color="primary">Register</button>
   </div>
-</div>
+</mat-card>

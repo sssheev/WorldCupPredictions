@@ -1,4 +1,8 @@
-.register-container{
+.register-card{
+  width: 400px;
   height: 300px;
-  width: 800px;
+}
+
+:host /deep/  .mat-form-field-infix{
+  width: 140px !important;
 }

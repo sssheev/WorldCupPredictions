@@ -1,7 +1,7 @@
 
 
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatFormFieldModule} from '@angular/material'
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatFormFieldModule,MatCardModule} from '@angular/material'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,7 +15,8 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     MatFormFieldModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   exports: [
@@ -25,7 +26,8 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     MatFormFieldModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatCardModule
 ]
 })
 export class SharedModule { }

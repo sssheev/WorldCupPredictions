@@ -1,12 +1,17 @@
-<div class="login-container" fxLayout="column" fxLayoutAlign="space-around center">
-    <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center"> 
-        <input matInput [(ngModel)]="loginString" placeholder="Username">
-    </mat-form-field>
-    <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center"> 
-        <input matInput [(ngModel)]="password" placeholder="Password">
-    </mat-form-field>
-    <div fxLayout="row" fxLayoutAlign="space-around center">
-        <button (click)="login()" mat-raised-button color="primary">Login</button>
+<mat-card class="login-card" fxLayout="column" fxLayoutAlign="space-between center">
+    <mat-card-header class="mat-header" fxLayout="row" fxLayoutAlign="center center ">
+            <mat-card-title class="mat-title">Sign In</mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout="column" fxLayoutAlign="space-around center">
+        <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center"> 
+            <input matInput [(ngModel)]="loginString" placeholder="Username">
+        </mat-form-field>
+        <mat-form-field class="full-width" fxLayout="row" fxLayoutAlign="center center"> 
+            <input matInput [(ngModel)]="password" placeholder="Password">
+        </mat-form-field>
+    </mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="space-around center" class="full-width">
         <button (click)="register()" mat-raised-button color="primary">Register</button>
+        <button (click)="login()" mat-raised-button color="primary">Sign In</button>
     </div>
-</div>
+</mat-card>

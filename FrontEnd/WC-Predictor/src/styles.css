@@ -3,3 +3,17 @@
 .full-width {
     width: 100%;
 }
+
+.mat-title {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+.mat-header {
+    width: 100%;
+    height:15px;
+}
+
+.small-input {
+    width: 165px;
+}
+
