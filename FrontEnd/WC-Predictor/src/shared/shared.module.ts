@@ -5,6 +5,8 @@ import {MatButtonModule, MatCheckboxModule, MatInputModule, MatFormFieldModule,M
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { DataModelService } from './datamodel/datamodel-service';
 @NgModule({
   declarations: [
   ],
@@ -16,9 +18,12 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     FlexLayoutModule,
     NoopAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+      DataModelService,
+    ],
   exports: [
     MatInputModule,
     MatButtonModule,
@@ -27,7 +32,8 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     FlexLayoutModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule,
 ]
 })
 export class SharedModule { }

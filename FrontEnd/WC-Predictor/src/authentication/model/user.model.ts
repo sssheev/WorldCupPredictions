@@ -12,6 +12,6 @@ export class User extends DataModel{
     dateUpdated: Date = null;
 
     getMetaData(): string {
-        return environment.LOCAL +  "/user";
+        return "/user";
     }
 }
