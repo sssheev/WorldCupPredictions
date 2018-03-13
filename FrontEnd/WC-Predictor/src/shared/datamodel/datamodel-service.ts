@@ -4,7 +4,8 @@ import { DataModel} from './datamodel';
 import { environment } from '../../environments/environment';
 import {Observable} from 'rxjs/Observable';
 
-// TODO Figure out how to connect to java API
+// TODO Switching to PHP might require some changes
+// Might need to stringify when sending
 @Injectable()
 export class DataModelService {
     constructor(private http: HttpClient) { }

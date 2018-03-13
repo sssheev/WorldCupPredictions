@@ -7,7 +7,7 @@ import { User } from '../model/user.model';
 @Injectable()
 export class AuthenticationService {
     constructor(private http: HttpClient) { }
- 
+    // Might want to use Authentication token Also might need to stringify
     private _currentUser: User = null; 
     login(username: string, password: string) {
         // TODO replace with out own api
