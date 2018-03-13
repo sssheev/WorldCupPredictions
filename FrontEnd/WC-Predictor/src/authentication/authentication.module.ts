@@ -4,11 +4,13 @@ import {LoginComponent} from "./component/login.component";
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import {RegisterComponent} from "./component/register.component";
+import { AuthenticationComponent } from './component/authentication.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +20,10 @@ import {RegisterComponent} from "./component/register.component";
 
   ],
   providers: [],
-  exports: [LoginComponent,RegisterComponent]
+  exports: [
+    LoginComponent,
+    RegisterComponent,
+    AuthenticationComponent
+  ]
 })
 export class AuthenticationModule { }

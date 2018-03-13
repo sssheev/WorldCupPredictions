@@ -29,7 +29,7 @@
     </div>
   </mat-card-content>
   <div fxLayout="row" fxLayoutAlign="space-around center" style="width:215px">
-    <button (click)="login()" mat-raised-button color="primary">Sign In</button>
+    <button (click)="loginEvent.emit(true)" mat-raised-button color="primary">Sign In</button>
     <button (click)="register()" mat-raised-button color="primary">Register</button>
   </div>
 </mat-card>

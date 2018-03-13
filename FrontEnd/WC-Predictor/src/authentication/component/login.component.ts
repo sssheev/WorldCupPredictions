@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter,Output } from '@angular/core';
 import { User } from '../model/user.model';
+
+
 
 @Component({
   selector: 'login-box',
@@ -10,12 +12,10 @@ export class LoginComponent {
   user: User = new User();
   loginString: string = "";
   password: string = "";
-
+  @Output()
+  registerEvent:EventEmitter<any> = new EventEmitter();
   login() {
 
   }
 
-  register() {
-
-  }
 }

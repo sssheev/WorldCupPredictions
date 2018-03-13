@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { User } from '../model/user.model';
 
 @Component({
@@ -8,12 +8,9 @@ import { User } from '../model/user.model';
 })
 export class RegisterComponent {
   user: User = new User();
-
   confirmPassword: string ="";
-
-  login() {
-
-  }
+  @Output()
+  loginEvent:EventEmitter<any> = new EventEmitter();
 
   register() {
 
