@@ -1,0 +1,21 @@
+PHP->Oracle steps:
+
+https://www.ugrad.cs.ubc.ca/~cs304/2017W2/php/index.htm
+
+1. create folder in your root ugrad account: "mkdir ~/public_html"
+2. change folder permission: "chmod 711 ~/public_html"
+3. change root permission: "chmod 711 ~"
+
+for any .php file you add into "~/public_html"
+1. change file permission: "chmod 755 test.php"
+2. go to the url: "http://www.ugrad.cs.ubc.ca/~a1b2c/hello.php", replacing a1b2c with your ugrad id.
+
+to connect to oracle: 
+1. add the .php file as described above
+2.  if ($c=OCILogon("ora_a1b2c", "a12345678", "dbhost.ugrad.cs.ubc.ca:1522/ug")) {
+		  echo "Successfully connected to Oracle.\n";
+		  OCILogoff($c);
+		} else {
+		  $err = OCIError();
+		  echo "Oracle Connect Error " . $err['message'];
+		}
