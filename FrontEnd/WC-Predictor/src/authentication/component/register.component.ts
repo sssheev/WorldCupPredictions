@@ -21,6 +21,9 @@ export class RegisterComponent {
   register() {
     this._dataModelService.create(this.user).subscribe(data => {
       //Redirect to appropriate page
+      //When a user registers we need to initialize them a empty Bracket in the DB
+      //For example the user will Have a record for group a populated with The default team ordering
+      //All with have a record for match 1 with no teams yet placed in it.
     this._authenticationService.currentUser = data;
     },
     err => {

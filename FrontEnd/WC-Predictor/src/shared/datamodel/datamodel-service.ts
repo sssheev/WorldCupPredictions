@@ -20,6 +20,12 @@ export class DataModelService {
         let id = "/" + dataModel.id;
         return this.http.get<T>(url + id);
     }
+
+    getAllByQueryString<T extends DataModel>(dataModel: T, queryString: string) {
+        let url = environment.LOCAL + dataModel.getMetaData() + "/";
+        let id = "/" + dataModel.id;
+        return this.http.get<T>(url + queryString);
+    }
  
     create<T extends DataModel>(dataModel: T):Observable<T> {
         let url = environment.LOCAL + dataModel.getMetaData();
